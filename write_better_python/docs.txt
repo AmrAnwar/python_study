@@ -1,0 +1,7 @@
+DOCS << 
+------------------
+#check if a file.py is written according to PEP8
+
+$flake8 test.py
+------------------
+$

@@ -1,0 +1,66 @@
+DOCS<<<
+________________________________________
+3 types of testing 
+1- unittest
+2- regression ( mistakes don't happen again)
+3- integration (runcode through a battery of uses to make sure a certain process work)
+
+
+________________Doctests________________
+def average(num_list):
+    """
+    Return the average for a list of numbers
+    >>> num_list =[1,2]
+    >>> average(num_list)
+    1.5
+    
+    """
+    return sum(num_list) / len(num_list)
+________________________________________
+$python -m doctest file_name.py
+
+########################################
+___________unit_test____________________
+import unittest
+
+class MoveTests(unittest.TestCase):
+
+  def test_five_plus_five(self):
+
+    assert 5+5 ==10
+
+  def test_one_plus_one(self):
+
+    assert not 1+1 ==4
+      
+  
+  def test_bad_description(self):
+        with self.assertRaises(ValueError):
+            dice.Roll('2b6')	
+
+if __name__=='__main__':
+  """
+  	to run the test directly 
+  	$python test_file.py
+  """
+  unittest.main()
+________________________________________
+$python -m unittest test_file.py
+________________________________________
+setUp() - Method that is run before each test. Use this to set up state for the tests
+
+assertEqual(x, y) - Make sure x and y are equal
+
+assertNotEqual(x, y) - Make sure x and y are not equal
+
+assertGreater(x, y) - Make sure x is greater than y
+
+assertLess(x, y) - Make sure x is less than y
+########################################
+______________coverage_________________
+$coverage run file_name.py 
+$coverage report 
+$coverage report -m
+..................
+$coverage html
+$python -m http.server
