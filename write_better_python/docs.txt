@@ -1,7 +1,50 @@
 DOCS << 
 ------------------
+You can read PEP 8 online. There are also sites like pep8online that'll check your code for you.: 
+
+You can also check your code in Workspaces by using flake8 <script_name.py>.
+------------------------
 #check if a file.py is written according to PEP8
 
 $flake8 test.py
 ------------------
 $
+__________________________________________________________
+PEP20
+>>>import this 
+__________________________________________________________
+DOCString:
+
+
+Docstrings don't require the triple-quotes, they just have to be a string, but the triple-quotes let you have returns in the strings, a very useful formatting feature.
+
+To find out more abut docstrings, read PEP 257.
+____________________________________
+Logging :
+
+
+    level - The level that you want to start logging messages at. Any message at this level or above will be logged.
+    Logging Levels:
+        CRITICAL
+        ERROR
+        WARNING
+        INFO
+        DEBUG
+        NOTSET
+
+Example:
+
+import logging
+try:
+    [1, 2, 3].remove(4)
+except ValueError:
+    logging.error("tried to remove an invalid value")
+    print("Sorry, that value doesn't exist.")
+
+___________________
+PDB:
+
+
+There are many more commands you can use with PDB. :https://docs.python.org/3/library/pdb.html?highlight=pdb#debugger-commands
+
+Reminder: Updating a script while PDB is running will not update the version in your PDB console. PDB doesn't magically reload (it would lose its place if it did).
