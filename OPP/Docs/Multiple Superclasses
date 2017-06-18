@@ -1,0 +1,5 @@
+
+
+You can use class.__mro__ to look at your class's method resolution order (MRO) if you're curious. Or use the inspect.getmro() function with your class to get the same information. This can be really handy if you're not sure what order the classes are being assembled.
+
+When you're using multiple inheritance, super() calls become really important. They let things like __init__ travel all the way up the chain to make sure the class has all of the bits and pieces that it needs.
